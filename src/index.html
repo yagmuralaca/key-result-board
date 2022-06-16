@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Key Result Board</title>
+    <link rel="stylesheet" href="/dist/output.css" />
+  </head>
+  <body class="bg-white h-screen m-0 p-0">
+    <div
+      class="bg-white my-4 w-11/12 shadow-gray-200/50 mx-auto h-20 shadow-nav  flex justify-between"
+    >
+      <div class="w-96 flex justify-between">
+        <button
+          class="h-full relative flex items-center bg-white text-gray-600 focus:outline-none border-none group"
+        >
+          <p class="px-4 text-xl font-bold">Key Result Board</p>
+          <span class="p-2">
+            <svg
+              class="fill-current h-4 w-4 "
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+              />
+            </svg>
+          </span>
+          <div
+            class="absolute top-full hidden group-focus:block min-w-full w-max bg-white shadow-md mt-1 rounded"
+          >
+            <ul class="text-left border rounded">
+              <li class="px-4 py-2 hover:bg-gray-100 border-b">example</li>
+              <li class="px-4 py-2 hover:bg-gray-100 border-b">example</li>
+              <li class="px-4 py-2 hover:bg-gray-100 border-b">example</li>
+            </ul>
+          </div>
+        </button>
+        <button class="flex h-full items-center px-6 border-x">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-gray-700"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <button
+        class="h-full relative flex items-center p-3 bg-orange-200/70 text-gray-600 focus:outline-none border-none group"
+      >
+        <span class="p-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-orange-500"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </span>
+        <p class="text-lg text-orange-500 font-semibold px-2">Add Widget</p>
+
+        
+      </button>
+    </div>
+
+    <div class="bg-white w-11/12 shadow-gray-500/40 mx-auto">
+      <div class="bg-white h-20 flex justify-between shadow-3xl">
+        <div class="flex">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-18 w-18 ml-3 stroke-red-400 " 
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+            />
+          </svg>
+          <span class="py-7 text-xl px-3 font-semibold text-gray-600">Key Result Board</span>
+        </div>
+
+        <div class="flex">
+          <a href="#" class="text-sm py-8 mr-2 text-gray-500"> Time </a>
+          <a href="#" class="text-sm py-8 mr-4 text-gray-900"> All Times </a>
+          <a href="#" class="text-sm py-8 mr-2 text-gray-500"> Filter </a>
+          <a href="#" class="text-sm py-8 mr-5 text-gray-900"> Completed </a>
+        </div>
+      </div>
+      <table class="w-full text-sm text-left text-gray-800 mt-4 shadow-3xl">
+        <thead
+          class="text-xs text-gray-700 bg-white border-b"
+        >
+          <tr class=" text-gray-400">
+            <th scope="col" class="px-6 py-3">Key Result</th>
+            <th scope="col" class="px-6 py-3">Start</th>
+            <th scope="col" class="px-6 py-3">Target</th>
+            <th scope="col" class="px-6 py-3">Current</th>
+            <th scope="col" class="px-6 py-3 w-1/3">Check-in Progress</th>
+            <th scope="col" class="px-6 py-3">Owners</th>
+            <th scope="col" class="px-6 py-3">Last Check-in</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-white border-b">
+            <th
+              scope="row"
+              class="px-6 py-4 font-medium text-gray-700 whitespace-nowrap"
+            >
+              NPS
+            </th>
+            <td class="px-6 py-4">20</td>
+            <td class="px-6 py-4">100</td>
+            <td class="px-6 py-4 flex">
+                <div class="box h-5 w-5 bg-gray-400 rounded-md mr-2"></div>
+                100
+            </td>
+
+            <td class="px-6 py-4">
+              <!-- <div
+                class="w-full h-5 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-100"
+              > -->
+                <span
+                  class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                  >0</span
+                >
+                <span
+                  class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                  >0</span
+                >
+                <span
+                  class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                  >0</span
+                >
+                <span
+                  class="bg-green-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                  >60</span
+                >
+                <span
+                  class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                  >60</span
+                >
+                <span
+                  class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                  >60</span
+                >
+                <span
+                  class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                  >60</span
+                >
+                <span
+                  class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                  >60</span
+                >
+              
+            </td>
+            <td class="px-6 py-4"></td>
+            <td class="px-6 py-4 flex">
+                0 
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mx-1" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+                100
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <th
+              scope="row"
+              class="px-6 py-4 font-medium text-gray-700 whitespace-nowrap"
+            >
+              Percentage Leads
+            </th>
+            <td class="px-6 py-4">0</td>
+            <td class="px-6 py-4">75</td>
+            <td class="px-6 py-4 flex">
+                <div class="box h-5 w-5 bg-green-400 rounded-md mr-2"></div>
+                75
+            </td>
+            <td class="px-6 py-4">
+                <!-- <div
+                  class="w-full h-5 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-100"
+                > -->
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >0</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >0</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >0</span
+                  >
+                  <span
+                    class="bg-green-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                
+              </td>
+            <td class="px-6 py-4"></td>
+            <td class="px-6 py-4 flex">
+                60 
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mx-1" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+                15
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <th
+              scope="row"
+              class="px-6 py-4 font-medium text-gray-700 whitespace-nowrap"
+            >
+              Close Rate
+            </th>
+            <td class="px-6 py-4">22</td>
+            <td class="px-6 py-4">27</td>
+            <td class="px-6 py-4 flex">
+                <div class="box h-5 w-5 bg-gray-400 rounded-md mr-2"></div>
+                26.4
+            </td>
+            <td class="px-6 py-4">
+                <!-- <div
+                  class="w-full h-5 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-100"
+                > -->
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >0</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >0</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >0</span
+                  >
+                  <span
+                    class="bg-green-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                
+              </td>
+            <td class="px-6 py-4"></td>
+            <td class="px-6 py-4 flex">
+                0 
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mx-1" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+                1.4
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <th
+              scope="row"
+              class="px-6 py-4 font-medium text-gray-700 whitespace-nowrap"
+            >
+              Quarterly Revenue
+            </th>
+            <td class="px-6 py-4">20K</td>
+            <td class="px-6 py-4">100K</td>
+            <td class="px-6 py-4 flex">
+                <div class="box h-5 w-5 bg-orange-400 rounded-md mr-2"></div>
+                95K
+            </td>
+            <td class="px-6 py-4">
+                <!-- <div
+                  class="w-full h-5 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-100"
+                > -->
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >0</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >0</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >0</span
+                  >
+                  <span
+                    class="bg-green-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                
+              </td>
+            <td class="px-6 py-4"></td>
+            <td class="px-6 py-4 flex">
+                0 
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mx-1" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+                0
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <th
+              scope="row"
+              class="px-6 py-4 font-medium text-gray-700 whitespace-nowrap"
+            >
+              New Country Revenue
+            </th>
+            <td class="px-6 py-4">0</td>
+            <td class="px-6 py-4">100K</td>
+            <td class="px-6 py-4 flex">
+                <div class="box h-5 w-5 bg-gray-400 rounded-md mr-2"></div>
+                0
+            </td>
+            <td class="px-6 py-4">
+                <!-- <div
+                  class="w-full h-5 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-100"
+                > -->
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >0</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >0</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >0</span
+                  >
+                  <span
+                    class="bg-green-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                
+              </td>
+            <td class="px-6 py-4"></td>
+            <td class="px-6 py-4 flex">
+                0 
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mx-1" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+                0
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <th
+              scope="row"
+              class="px-6 py-4 font-medium text-gray-700 whitespace-nowrap"
+            >
+              Profit Margin
+            </th>
+            <td class="px-6 py-4">0</td>
+            <td class="px-6 py-4">54</td>
+            <td class="px-6 py-4 flex">
+                <div class="box h-5 w-5 bg-gray-400 rounded-md mr-2"></div>
+                23
+            </td>
+            <td class="px-6 py-4">
+                <!-- <div
+                  class="w-full h-5 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-100"
+                > -->
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >0</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >0</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >0</span
+                  >
+                  <span
+                    class="bg-green-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                
+              </td>
+            <td class="px-6 py-4"></td>
+            <td class="px-6 py-4 flex">
+                0 
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mx-1" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+                0
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <th
+              scope="row"
+              class="px-6 py-4 font-medium text-gray-700 whitespace-nowrap"
+            >
+              Customer
+            </th>
+            <td class="px-6 py-4">20</td>
+            <td class="px-6 py-4">100</td>
+            <td class="px-6 py-4 flex">
+                <div class="box h-5 w-5 bg-green-400 rounded-md mr-2"></div>
+                70
+            </td>
+            <td class="px-6 py-4">
+                <!-- <div
+                  class="w-full h-5 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-100"
+                > -->
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >0</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >0</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >0</span
+                  >
+                  <span
+                    class="bg-green-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                
+              </td>
+            <td class="px-6 py-4"></td>
+            <td class="px-6 py-4 flex">
+                0 
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mx-1" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+                70
+            </td>
+          </tr>
+          <tr class="bg-white">
+            <th
+              scope="row"
+              class="px-6 py-4 font-medium text-gray-700 whitespace-nowrap"
+            >
+              Hapiness
+            </th>
+            <td class="px-6 py-4">50</td>
+            <td class="px-6 py-4">100</td>
+            <td class="px-6 py-4 flex">
+                <div class="box h-5 w-5 bg-pink-400 rounded-md mr-2"></div>
+                36
+            </td>
+            <td class="px-6 py-4">
+                <!-- <div
+                  class="w-full h-5 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-100"
+                > -->
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >0</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >0</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >0</span
+                  >
+                  <span
+                    class="bg-green-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                  <span
+                    class="bg-gray-300 text-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                    >60</span
+                  >
+                
+              </td>
+            <td class="px-6 py-4"></td>
+            <td class="px-6 py-4 flex">
+                0 
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mx-1" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+                100
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
